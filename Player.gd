@@ -15,15 +15,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		vel.x = speed
-		$Icon.play("Run")
-		$Icon.flip_h = false
 	elif Input.is_action_pressed("ui_left"):
 		vel.x = -speed
-		$Icon.play("Run")
-		$Icon.flip_h = true
 	else:
 		vel.x = 0
-		$Icon.play("Idle")
 	if is_on_floor() or is_on_wall() and jump_count != 0:
 		jump_count = 0
 	if jump_count<jump_max:
