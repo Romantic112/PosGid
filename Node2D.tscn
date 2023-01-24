@@ -2,8 +2,7 @@
 
 [ext_resource path="res://cddf67f8c715af9550b6f47f217b970e.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/Idle.png" type="Texture" id=3]
-
+[ext_resource path="res://31cdac918e47499.png" type="Texture" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
