@@ -6,7 +6,12 @@ var graviti = 700
 var vel = Vector2()
 var jump_max = 2
 var jump_count = 0
+
+
 func _physics_process(delta):
+	
+	if vel.y >= 1500:
+		get_tree().reload_current_scene()
 	
 	if Input.is_action_pressed("ui_right"):
 		vel.x = speed
