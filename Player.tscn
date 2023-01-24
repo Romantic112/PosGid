@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Run5.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -9,13 +9,19 @@
 [ext_resource path="res://Player/Run4.png" type="Texture" id=7]
 [ext_resource path="res://Player/Run3.png" type="Texture" id=8]
 [ext_resource path="res://Player/Run1.png" type="Texture" id=9]
+[ext_resource path="res://Player/Idle.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Run",
-"speed": 5.0
+"speed": 100.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -26,7 +32,7 @@ script = ExtResource( 2 )
 
 [node name="Icon" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "Run"
+animation = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -4 )
