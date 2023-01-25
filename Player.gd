@@ -30,5 +30,10 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_up"):
 			vel.y = -jump
 			jump_count += 1
+			#$Icon.play("Jump")
 	vel.y += graviti * delta
 	vel = move_and_slide(vel, Vector2.UP)
+
+
+func _on_Area2D_body_exited(body):
+	get_tree().reload_current_scene()
