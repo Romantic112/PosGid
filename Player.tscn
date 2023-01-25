@@ -37,13 +37,17 @@ extents = Vector2( 18, 26 )
 script = ExtResource( 2 )
 
 [node name="Icon" type="AnimatedSprite" parent="."]
+position = Vector2( 274.5, 229.5 )
 frames = SubResource( 2 )
 animation = "Jump"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -4 )
-shape = SubResource( 1 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 5 )
+anchor_mode = 0
 current = true
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 276.5, 227.5 )
+shape = SubResource( 1 )
