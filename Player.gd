@@ -37,3 +37,7 @@ func _physics_process(delta):
 
 func _on_Area2D_body_exited(body):
 	get_tree().reload_current_scene()
+
+
+
+
