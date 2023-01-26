@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://pixil-frame-0 (16).png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.5, 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.5, 5.8125 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 9, 1.5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5.5, 11 )
+shape = SubResource( 1 )
+
+[node name="Pixil-frame-0(16)" type="Sprite" parent="."]
+position = Vector2( 7, 12 )
+scale = Vector2( 1.21875, 1.21875 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="Kill" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill"]
+position = Vector2( 7.5, 1.1875 )
+shape = SubResource( 2 )
+
+[node name="NoKill" type="Area2D" parent="."]
+position = Vector2( 4, 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoKill"]
+position = Vector2( 3, -9.5 )
+shape = SubResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -19, -2 )
+enabled = true
+cast_to = Vector2( 0, 29 )
+
+[connection signal="body_entered" from="Kill" to="." method="_on_Kill_body_entered"]
+[connection signal="body_entered" from="NoKill" to="." method="_on_NoKill_body_entered"]
