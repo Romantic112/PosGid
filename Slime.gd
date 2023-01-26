@@ -4,13 +4,14 @@ var go_left = true
 
 var graviti = 10
 var vel = Vector2()
-var speed = 150
+var speed = 50
 
 func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
 	vel.x = -speed
+	$AnimationPlayer.play("Run")
 	
 	if go_left:
 		vel.x = -speed
