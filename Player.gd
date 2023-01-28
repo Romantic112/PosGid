@@ -7,7 +7,11 @@ var vel = Vector2()
 var jump_max = 2
 var jump_count = 0
 
+var coin = 0
+	
+	
 
+	
 func _physics_process(delta):
 	
 	if vel.y >= 1500:
@@ -52,3 +56,12 @@ func _on_Key_body_entered(body):
 
 	
 	
+
+
+
+func _on_Coin_body_entered(body):
+	coin += 1
+	$Lable.text = "" + str(coin)
+	
+
+

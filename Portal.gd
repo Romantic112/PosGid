@@ -1,15 +1,14 @@
 extends Area2D
  
-
-const rin = 0
+var key = 0
+func key():
+	key += 1
  
 export(String, FILE) var Next_Level: String = ""
 
 func _ready():
-	visible = false
 	$Portal.play("Idle")
-	if rin == 1:
-		visible = true
+
 	
 	
 func _on_Portal_body_entered(body):
