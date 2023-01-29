@@ -313,6 +313,9 @@ position = Vector2( 792, 952 )
 [node name="Coin6" parent="Node2D" instance=ExtResource( 11 )]
 position = Vector2( 272, -240 )
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.619608, 0.215686, 0.215686, 1 )
+
 [connection signal="body_entered" from="Node2D/Coin" to="Player" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Node2D/Coin2" to="Player" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Node2D/Coin3" to="Player" method="_on_Coin_body_entered"]
