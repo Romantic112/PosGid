@@ -181,7 +181,7 @@ position = Vector2( 1468, 560 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="162571938250-kartinkin-com-p-piksel-art-oboi-art-krasivo-53" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 496.056, 317.5 )
+position = Vector2( 549, 323 )
 scale = Vector2( 1.56118, 1.65889 )
 texture = ExtResource( 6 )
 
