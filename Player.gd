@@ -69,3 +69,7 @@ func _on_Coin_body_entered(body):
 
 func _on_Ship_body_entered(body):
 	get_tree().reload_current_scene()
+
+
+func _on_Light_body_entered(body):
+	$Light2D.enabled = true
