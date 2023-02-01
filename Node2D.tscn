@@ -13,7 +13,7 @@
 [ext_resource path="res://CoinAnim/Coin1.png" type="Texture" id=11]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=12]
 [ext_resource path="res://1669933288_50-kartinkin-net-p-shlepa-piksel-art-oboi-63.png" type="Texture" id=13]
-[ext_resource path="res://light.png" type="Texture" id=14]
+[ext_resource path="res://Ship.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -268,11 +268,6 @@ position = Vector2( 256, 176 )
 scale = Vector2( 0.0590986, 0.0590986 )
 texture = ExtResource( 11 )
 
-[node name="Light2D" type="Light2D" parent="Player"]
-position = Vector2( -731, 150 )
-scale = Vector2( 1.99219, 1 )
-texture = ExtResource( 14 )
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( 15, 48 )
 
@@ -281,7 +276,7 @@ position = Vector2( 15, 48 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Pixel-Art-2880X1920" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 896, 208 )
+position = Vector2( 898, 347 )
 scale = Vector2( 1.43204, 1.43204 )
 texture = ExtResource( 13 )
 
@@ -315,6 +310,9 @@ position = Vector2( 663, 2016 )
 [node name="Coin6" parent="Node2D" instance=ExtResource( 9 )]
 position = Vector2( 615, 2016 )
 
+[node name="Ship" parent="Node2D" instance=ExtResource( 14 )]
+position = Vector2( 1307, 858 )
+
 [node name="Key" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1799, 1008 )
 scale = Vector2( 0.3, 0.3 )
@@ -347,3 +345,4 @@ text = "Иди по стрелкам что-бы
 [connection signal="body_entered" from="Node2D/Coin4" to="Player" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Node2D/Coin5" to="Player" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Node2D/Coin6" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Node2D/Ship" to="Player" method="_on_Ship_body_entered"]
