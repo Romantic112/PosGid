@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://cddf67f8c715af9550b6f47f217b970e.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://CoinAnim/Coin1.png" type="Texture" id=11]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=12]
 [ext_resource path="res://1669933288_50-kartinkin-net-p-shlepa-piksel-art-oboi-63.png" type="Texture" id=13]
-[ext_resource path="res://Ship.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -310,9 +309,6 @@ position = Vector2( 663, 2016 )
 [node name="Coin6" parent="Node2D" instance=ExtResource( 9 )]
 position = Vector2( 615, 2016 )
 
-[node name="Ship" parent="Node2D" instance=ExtResource( 14 )]
-position = Vector2( 1307, 858 )
-
 [node name="Key" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1799, 1008 )
 scale = Vector2( 0.3, 0.3 )
@@ -345,4 +341,3 @@ text = "Иди по стрелкам что-бы
 [connection signal="body_entered" from="Node2D/Coin4" to="Player" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Node2D/Coin5" to="Player" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Node2D/Coin6" to="Player" method="_on_Coin_body_entered"]
-[connection signal="body_entered" from="Node2D/Ship" to="Player" method="_on_Ship_body_entered"]
