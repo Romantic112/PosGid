@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=17 format=2]
+=======
+[gd_scene load_steps=16 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cddf67f8c715af9550b6f47f217b970e.png" type="Texture" id=2]
@@ -7,9 +11,14 @@
 [ext_resource path="res://Water.tscn" type="PackedScene" id=5]
 [ext_resource path="res://1625719382_50-kartinkin-com-p-piksel-art-oboi-art-krasivo-53.jpg" type="Texture" id=6]
 [ext_resource path="res://preview_497 (1).png" type="Texture" id=7]
+<<<<<<< Updated upstream
 [ext_resource path="res://Light.tscn" type="PackedScene" id=9]
 [ext_resource path="res://light.png" type="Texture" id=10]
 [ext_resource path="res://Light2D.gd" type="Script" id=11]
+=======
+[ext_resource path="res://Light2D.gd" type="Script" id=8]
+[ext_resource path="res://Light.tscn" type="PackedScene" id=9]
+>>>>>>> Stashed changes
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -119,6 +128,7 @@ polygon = PoolVector2Array( 0, 0, 66, 0, 66, 40, 0, 40 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( -89, 53 )
+script = ExtResource( 8 )
 
 [node name="Light2D" type="Light2D" parent="KinematicBody2D"]
 position = Vector2( 280.5, 220.579 )
@@ -200,7 +210,11 @@ scale = Vector2( 1.56118, 1.23111 )
 color = Color( 0.180392, 0.164706, 0.164706, 1 )
 
 [node name="Light" parent="." instance=ExtResource( 9 )]
+<<<<<<< Updated upstream
 position = Vector2( 1271, 232 )
+=======
+position = Vector2( 13, 297 )
+>>>>>>> Stashed changes
 
 [connection signal="body_entered" from="Node2D/Area2D" to="KinematicBody2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Light" to="KinematicBody2D" method="_on_Light_body_entered"]
